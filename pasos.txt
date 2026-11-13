@@ -1,0 +1,67 @@
+TEMA : CODE REVIEW SAST
+
+Crear repo github
+
+sacar el .rar
+
+app.py -> codigo del archivo 1
+github -> code -> codespace -> crear codespace
+pip install semgrep flask
+semgrep --version
+
+semgrep scan --config p/python --config p/owasp-top-ten app.py
+sas vulnerabilidades
+
+python3 app.py -> notificacion de puerto -> picarle
+
+url -> /buscar?nombre=ana
+
+sql inject -> /buscar?nombre='or 1=1 -- -
+
+url -> /saludo?nombre=ana
+xss -> /saludo?nombre=<script>alert('XSS');</script>
+
+url -> /buscar?nombre='
+
+2.txt -> app.py
+
+codespace -> git pull
+
+semgrep scan --config p/python --config p/owasp-top-ten app.py
+sas todo bien
+
+automatizar uy uy uy
+
+crear .github/workflows
+mover 3.txt -> semgrep.yml
+
+pushear en local, pullear en codespace
+
+repo -> actions -> sale semgrep
+
+en codespace
+
+git branch prueba-workflow
+git checkout prueba-workflow
+
+cambiar app segura a app-2.py
+cambiar app-1 (insegura) a app.py
+
+git add .
+git commit -m "1.txt vuelve a ser app.py"
+git push origin prueba-workflow
+
+repo -> compara & pull request -> create pull request
+workflow se pone a chambear
+workflow dice que no se puede (vulnerabilidades)
+close request
+
+codespace -> volver a cambiar las apps.py
+add commit push
+
+repo -> branch prueba -> contribute -> open pull request -> create
+workflow se pone a chambear
+workflow dice que si se puede
+merge
+
+repo -> actions ->semgrep -> sale el proceso
